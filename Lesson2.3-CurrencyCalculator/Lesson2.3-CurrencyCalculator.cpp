@@ -1,20 +1,30 @@
 // Lesson2.3-CurrencyCalculator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+
+	double pesos, reais, soles, dollars;
+
+	cout << "Enter number of Columbian Pesos: ";
+	cin >> pesos;
+
+	cout << "Enter number of Brazilian Reais: ";
+	cin >> reais;
+
+	cout << "Enter number of Peruvian Soles: ";
+	cin >> soles;
+
+	/*Exchange rates: 1 peso = 0.00027 USD, 1 Raeis =  0.19 USD, 1 Sol = .28 USD
+		Exchange rate provided by google on 8/6/2020. */
+	double pesosExchRate, raeisExchRate, solesExchRate;
+
+	pesosExchRate = 0.00027;
+	raeisExchRate = 0.19;
+	solesExchRate = .28;
+
+	dollars = (pesos*pesosExchRate) + (reais*raeisExchRate) + (soles*solesExchRate);
+
+	cout << "Equivalent US Dollars: " << dollars << endl;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
